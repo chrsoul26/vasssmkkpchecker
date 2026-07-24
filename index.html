@@ -1518,7 +1518,7 @@ const translations = {
         vassWhyTitle: "WHY DID WE CREATE THIS PRODUCT?",
         vassWhyDesc: "Because we realized the common issues teachers face when manually taking student attendance.<br><br>This is due to <u>frequent human errors</u> and <u>delay or forgetting to record student attendance.</u><br><br>On top of that, this product was created to <u>reduce parents' anxiety</u> regarding student truancy.<br><br>Therefore, we decided to create a product that can <u>ease the burden on teachers and relieve parental concern</u>, which is <b>V.A.S.S</b>.",
         vassAdvTitle: "ADVANTAGES OF V.A.S.S:",
-        vassAdvList: "<li>Teacher can take students attendance easily.</li><li>Supports both co-curricular and regular morning session attendance.</li><li>Reduces paper consumption.</li><li>Allows remote student monitoring via integrated camera.</li><li>Said no more to lost attendance records or forgot to take attendance.</li>",
+        vassAdvList: "<li>Teacher can take students attendance easily.</li><li><del>Supports both co-curricular and regular morning session attendance.</del></li><li>Reduces paper consumption.</li><li><del>Allows remote student monitoring via integrated camera.</del></li><li>Said no more to lost attendance records or forgot to take attendance.</li>",
         roleEllisa: "Web Developer / Graphic Designer",
         roleAleesya: "Group Leader / Arduino Programmer / Product Designer",
         roleDelvina: "Material Cutting & Measurement Specialist",
@@ -1754,8 +1754,9 @@ const showSectionSelectionGrid = () => {
             <button class="visual-menu-btn" style="grid-column: span 2; justify-self: center; width: calc(50% - 10px);" onClick="tunjukAmaran('${isEN ? 'Grade Selection' : 'Pilihan Tingkatan'}')"><i class="fa-solid fa-layer-group"></i> ${isEN ? 'Grade' : 'Tingkatan'}</button>
         `;
     } else if (currentSection === "Kehadiran Kokum") {
+        // Ditambah amaran pada Murid & semua kategori Kokum
         gridMenu.innerHTML = `
-            <button class="visual-menu-btn" onClick="selectSearchType('Murid', 'fa-user')"><i class="fa-solid fa-user"></i> ${isEN ? 'Student' : 'Murid'}</button>
+            <button class="visual-menu-btn" onClick="tunjukAmaran('${isEN ? 'Student Selection (Kokum)' : 'Pilihan Murid (Kokum)'}')"><i class="fa-solid fa-user"></i> ${isEN ? 'Student' : 'Murid'}</button>
             <button class="visual-menu-btn" onClick="tunjukAmaran('Sukan & Permainan')"><i class="fa-solid fa-baseball"></i> ${isEN ? 'Sports & Games' : 'Sukan & Permainan'}</button>
             <button class="visual-menu-btn" onClick="tunjukAmaran('Badan Beruniform')"><i class="fa-solid fa-user-tie"></i> ${isEN ? 'Uniformed Bodies' : 'Badan Beruniform'}</button>
             <button class="visual-menu-btn" onClick="tunjukAmaran('Kelab & Persatuan')"><i class="fa-solid fa-flask"></i> ${isEN ? 'Clubs & Societies' : 'Kelab & Persatuan'}</button>
